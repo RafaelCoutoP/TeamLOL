@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Team Lol</string>
+    <string name="entrar">Entrar</string>
+    <string name="texto_cadastrar">Clique aqui para criar uma conta</string>
+</resources>

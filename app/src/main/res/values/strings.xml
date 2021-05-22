@@ -2,4 +2,24 @@
     <string name="app_name">Team Lol</string>
     <string name="entrar">Entrar</string>
     <string name="texto_cadastrar">Clique aqui para criar uma conta</string>
+    <string name="titulo_cadastro">Cadastre aqui</string>
+    <string-array name="rotas">
+        <item>Top</item>
+        <item>Mid</item>
+        <item>Jungle</item>
+        <item>AdCarry</item>
+        <item>Support</item>
+    </string-array>
+    <string-array name="elo">
+        <item>Ferro</item>
+        <item>Bronze</item>
+        <item>Prata</item>
+        <item>Ouro</item>
+        <item>Platina</item>
+        <item>Diamante</item>
+        <item>Mestre</item>
+        <item>Grão Mestre</item>
+        <item>Desafiante</item>
+    </string-array>
+
 </resources>

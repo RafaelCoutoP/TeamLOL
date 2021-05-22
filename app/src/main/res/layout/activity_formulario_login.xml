@@ -30,6 +30,7 @@
         style="@style/Edit_Text"
         android:hint="Email"
         android:drawableRight="@drawable/ic_email"
+        android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="@id/containerCompotenentes"
         app:layout_constraintEnd_toEndOf="@id/containerCompotenentes"
         app:layout_constraintTop_toTopOf="@id/containerCompotenentes"/>
@@ -39,6 +40,7 @@
         style="@style/Edit_Text"
         android:hint="Senha"
         android:drawableRight="@drawable/ic_key"
+        android:inputType="numberPassword"
         app:layout_constraintStart_toStartOf="@id/containerCompotenentes"
         app:layout_constraintEnd_toEndOf="@id/containerCompotenentes"
         app:layout_constraintTop_toBottomOf="@id/edit_email"
@@ -56,6 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/containerCompotenentes" />

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "24222469163",
+    "project_id": "projeto-team-lol",
+    "storage_bucket": "projeto-team-lol.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24222469163:android:ced45794199ed07add2e6e",
+        "android_client_info": {
+          "package_name": "com.example.teamlol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24222469163-3jp47f1vtovcn61p3br85barbp0eov8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZpGGGt9T0NRh5FzRCe6dye48ss_1NdYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24222469163-3jp47f1vtovcn61p3br85barbp0eov8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

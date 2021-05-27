@@ -1,3 +1,4 @@
+
 package com.example.teamlol;
 
 import androidx.annotation.Nullable;
@@ -24,6 +25,8 @@ public class TelaPrincipal extends AppCompatActivity {
     private TextView eloUsuraio;
     private TextView rotaUsuario;
     private Button botaoDeslogar;
+    private Button botaoJogadores;
+
     String usuarioID;
     FirebaseFirestore database = FirebaseFirestore.getInstance();
 
@@ -34,6 +37,15 @@ public class TelaPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_tela_principal);
         getSupportActionBar().hide();
         IniciarComponentes();
+
+        botaoJogadores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent(TelaPrincipal.this, ListandoUsuarios.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         botaoDeslogar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +89,6 @@ public class TelaPrincipal extends AppCompatActivity {
         eloUsuraio = findViewById(R.id.text_elo_usuario);
         rotaUsuario = findViewById(R.id.text_rota_usuario);
         botaoDeslogar = findViewById(R.id.bt_deslogar);
-
+        botaoJogadores = findViewById(R.id.bt_lista_usuario);
     }
 }

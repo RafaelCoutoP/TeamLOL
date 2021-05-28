@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
@@ -30,7 +31,7 @@ public class ListandoUsuarios extends AppCompatActivity {
         getSupportActionBar().hide();
 
         firebaseFirestore = FirebaseFirestore.getInstance();
-        IniciarComponentes();
+        mFirestoreList = findViewById(R.id.firestore_list);
 
 
         Query query = firebaseFirestore.collection("Usuarios");
@@ -42,14 +43,17 @@ public class ListandoUsuarios extends AppCompatActivity {
             @NonNull
             @Override
             public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_single, parent, false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_singlee, parent, false);
                 return new UserViewHolder(view);
             }
 
             @Override
             protected void onBindViewHolder(@NonNull UserViewHolder holder, int position, @NonNull UsuarioModel model) {
-                holder.list_name.setText(model.getNome());
+                holder.list_nome.setText(model.getNome());
                 holder.list_discord.setText(model.getDiscord());
+                holder.list_elo.setText(model.getElo());
+                holder.list_rota.setText(model.getRota());
+
             }
         };
 
@@ -61,21 +65,21 @@ public class ListandoUsuarios extends AppCompatActivity {
 
     private class UserViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView list_name;
+        private TextView list_nome;
         private TextView list_discord;
+        private TextView list_elo;
+        private TextView list_rota;
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            list_name = itemView.findViewById(R.id.list_nome);
-            list_discord = itemView.findViewById(R.id.list_discord);
+            list_nome = itemView.findViewById(R.id.list_name_user);
+            list_discord = itemView.findViewById(R.id.list_discord_user);
+            list_elo = itemView.findViewById(R.id.list_elo_user);
+            list_rota = itemView.findViewById(R.id.list_rota_user);
 
         }
     };
-
-    private void IniciarComponentes(){
-        mFirestoreList = findViewById(R.id.firestore_list);
-    }
 
     @Override
     protected void onStop() {
